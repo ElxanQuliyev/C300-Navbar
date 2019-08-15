@@ -1,0 +1,48 @@
+.dropdown .mainDrop {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+  visibility: hidden;
+  opacity: 0;
+  top: 80px;
+  transition: all .2s ease-in-out; }
+.dropdown:hover .mainDrop {
+  top: 100%;
+  visibility: visible;
+  opacity: 1; }
+
+.dropSub {
+  position: relative; }
+  .dropSub .subDropdown {
+    position: absolute;
+    left: -50%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    background: #ccc;
+    top: 20px;
+    transition: all .2s ease-in-out; }
+  .dropSub:hover .subDropdown {
+    top: 0;
+    visibility: visible;
+    opacity: 1; }
+
+@media (max-width: 768px) and (hover: hover) {
+  .dropSub:hover .subDropdown {
+    visibility: hidden;
+    opacity: 0; }
+
+  .dropdown:hover .mainDrop {
+    visibility: hidden;
+    opacity: 0; }
+    .dropdown:hover .mainDrop.active {
+      visibility: visible;
+      opacity: 1;
+      position: static; } }
+
+/*# sourceMappingURL=style.css.map */
